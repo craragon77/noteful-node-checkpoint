@@ -14,7 +14,7 @@ const serializedNotes = note => ({
 })
 
 notesRouter
-    .route('/')
+    .route('/notes')
     .get((req,res, next) => {
         const knexInstance = req.app.get('db')
         NotesService.getAllNotes(knexInstance)
@@ -48,7 +48,7 @@ notesRouter
         })
         .catch(next)
 
-UsersService
+NotesService
     .route('/:note-id')
     .all((req, res, next) => {
         NotesService.getById(
@@ -100,4 +100,4 @@ UsersService
         })
         .catch(next)
 
-module.exports = userRouter
+module.exports = NotesService
