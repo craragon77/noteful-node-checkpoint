@@ -1,4 +1,4 @@
-INSERT INTO note (title, content)
+INSERT INTO notes (title, content)
 VALUES
 ('fist note!', 'lorem imsup'),
 ('second note!', 'lorem imsup'),

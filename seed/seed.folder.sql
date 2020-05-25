@@ -1,5 +1,5 @@
-INSERT INTO folder (title, note_id)
+INSERT INTO folders (note_id, name)
 VALUES
-('first folder', 1),
-('second folder', 2),
-('third folder', 3);
+(1, 'first folder'),
+(2, 'second folder'),
+(3, 'third folder');
