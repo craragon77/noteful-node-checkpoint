@@ -20,9 +20,11 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "mocha --require test/setup.js",
+    "prebuild": "CI=true react-scripts test --color",
+    "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "migrate": "postgrator --config postgrator-config.js"
+    "predeploy": "npm run build",
+    "deploy": "vercel --prod"
   },
   "eslintConfig": {
     "extends": "react-app"
